@@ -1,0 +1,113 @@
+#menu{
+        ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+            li{
+            min-width: 97px;
+            height: 100%;
+            line-height: 145px;
+            text-align: center;
+            list-style: none;
+            a{
+                padding: 0 1em;
+                color: $white;
+                font-size: 22px;
+                &:hover{
+                    color: $gray;
+                    transition: all 0.2s linear;
+                }
+            }
+            .btn-actived{
+                color: $gray;
+            }
+        }
+    }
+}
+@media (max-width: 1000px) and (min-width: 0px){
+    #menu{
+        transform: translateX(-100%);
+        width: 100%;
+        background-color: $white;
+        position: fixed;
+        height: auto;
+        transition: 1s ease;
+        margin-top: 300px;
+        ul{
+            width: 99.5%;
+            height: auto;
+            flex-direction: column;
+            li{
+                background-color: $black;
+                width: 100%;
+                min-height: 170px;
+                line-height: 170px;
+                border-bottom: 5px solid whitesmoke;
+                a{
+                    font-size: 70px;
+                }
+            }
+            li:first-child{
+                border-top: 5px solid $white;
+            }
+        }
+    }
+}
+@media (max-width: 625px){
+    #menu{
+        height: 385px;
+        margin-top: 100px;
+        ul{
+            li{
+                min-height: 90px;
+                line-height: 90px;
+                a{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 350px){
+    #menu{
+        margin-top: 80px;
+        height: 250px;
+        ul{
+            li{
+                min-height: 0;
+                line-height: 60px;
+                a{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+@media (orientation: landscape) and (max-width:1000px){
+    #menu{
+        margin-top: 150px;
+        height: 80vh;
+        background-color: $black;
+        ul{
+            background-color: $white;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 75%;
+            li{
+                min-height: 0;
+                border: 0;
+                margin: 0.5%;
+                width: 49%;
+                height: 47%;
+                line-height: 150px;
+                a{
+                    font-size: 40px;
+                }
+            }
+            li:first-child{
+                border: 0;
+            }
+        }
+    }
+}

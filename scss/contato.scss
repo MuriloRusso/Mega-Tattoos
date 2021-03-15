@@ -1,0 +1,138 @@
+.contato{
+    color: $white;
+    width: 100%;
+    height: 711px;
+    background-image: url(../img/contato.jpg);
+    background-size: cover;
+    .filter{
+        background-color: rgba(0,0,0,0.6);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        svg{
+            height: 80px;
+            width: 50px;
+            fill: $white;
+            margin-right: 10px;
+            cursor: pointer; 
+        }
+        h2{
+            font-size: 50px;
+        }
+        hr{
+            width: 400px;
+            height: 2px;
+            background-color: $white;
+        }
+        h3{
+            color: orange;
+            font-size: 50px;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            svg:first-child:hover{
+                fill: midnightblue;
+//                background-color: plum
+            }
+            svg:nth-child(2):hover{
+                fill: plum;
+            }
+            svg:nth-child(3):hover{
+                fill: lightblue;
+            }
+            svg:nth-child(4):hover{
+                fill: green;
+            }
+            svg:last-child:hover{
+                fill: firebrick;
+            }
+        }
+    }
+}
+@media (max-width: 1000px) and (min-width: 0px){
+    .contato{
+        height: 100vh;
+        background-position: center;
+        .filter{
+            h2, h3{
+                font-size: 100px;
+            }
+            svg{ 
+                height: 200px;
+                margin-left: 20px;
+                width: 100px;
+            }
+            div{
+                flex-wrap: wrap;
+                svg{ 
+                    height: 200px;
+                    margin-left: 20px;
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 625px){
+    .contato{
+        .filter{
+            svg{
+                width: 50px;
+                height: 100px;
+            }
+            h2, h3{
+                font-size: 50px;
+            }
+            hr{
+                width: 50%;
+            }
+            div{
+                svg{
+                    width: 50px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 350px){
+    .contato{
+        height: 60vh;
+        .filter{
+            svg{
+                width: 30px;
+                height: 60px;
+            }
+            h2, h3{
+                font-size: 30px;
+            }
+            div{
+                svg{
+                    width: 30px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 220px){
+    .contato{
+        height: 60vh;
+        .filter{
+            h2, h3{
+                font-size: 20px;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+@media (orientation: landscape) and (max-width:1000px){
+    .contato{
+        height: 130vh;
+    }
+}

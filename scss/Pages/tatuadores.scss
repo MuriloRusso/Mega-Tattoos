@@ -1,0 +1,231 @@
+.header-tatuadores{
+    height: 100vh;
+    .info-box-header-tatuadores{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-image: url(../../img/Pages/Tatuadores/bg.jpg);
+        .filter{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h2{
+                color: $white;
+            }
+        }
+    }
+}
+
+.container-tatuadores{
+    @include txt-info-box();
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        margin-top: 20px;
+    }
+    hr{
+        width: 400px;
+        background-color: $black;
+    }
+    .reverse{
+        background-color: #ddd;
+        flex-direction: row-reverse;
+    }
+    article{
+        width: 100%;
+        height: 360px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        img{
+            width: 600px;
+            height: 320px;
+        }
+        div{
+            width: 600px;
+            height: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                font-size: 25px;
+                font-weight: 400;
+            }
+            hr{
+                width: 200px;
+            }
+            p{
+                font-size: 20px;
+            }
+            div{
+                width: 75%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                div{
+                    height: auto;
+                    margin-left: 10px;
+                    justify-content: space-between;
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                        fill: #3a3a3a;
+                    }
+                }
+                div:first-child{
+                    &:hover{
+                        color: darkblue;
+                        svg{
+                            fill: darkblue;
+                        }
+                    }
+                }
+                div:nth-child(2){
+                    &:hover{
+                        color: plum;
+                        svg{
+                            fill: plum;
+                        }
+                    }
+                }
+                div:last-child{
+                    &:hover{
+                        color: green;
+                        svg{
+                            fill: green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1000px) and (min-width: 0px){
+    .header-tatuadores {
+        height: 60vh;
+        .info-box-header-tatuadores{
+            .filter{
+                h2{
+                    font-size: 120px;
+                }
+            }
+        }
+    }
+    .container-tatuadores{
+        p{
+            margin-left: 0;
+        }
+        .reverse{
+            flex-direction: column;
+        }
+        article{
+//            height: 2000px;
+            height: auto;
+            flex-direction: column;
+            img{
+                width: 95%;
+                height: 30%;
+            }
+            div{
+                width: 100%;
+                height: 70%;
+                h2{
+                    font-size: 70px;
+                }
+                hr{
+                    width: 200px;
+                }
+                p{
+                    font-size: 50px;
+                    margin-top: 0;
+                }
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    div{
+                        svg{
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 625px) and (min-width: 0px){
+    .header-tatuadores{
+        height: 60vh;
+        .info-box-header-tatuadores{
+            .filter{
+                h2{
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+    .container-tatuadores{
+        hr{
+            width: 50%;
+            height: auto;
+        }
+        article{
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+@media (max-width: 350px) and (min-width: 0px){
+    .header-tatuadores{
+        .info-box-header-tatuadores{
+            .filter{
+                h2{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    .container-tatuadores{
+        article{
+            div{
+                h2{
+                    font-size: 28px;
+                }
+                p{
+                    font-size: 15px;
+                }
+                div{
+                    div{
+                        svg{
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (orientation: landscape) and (max-width:1000px){
+    .header-tatuadores {
+        height: 120vh;
+        .info-box-header-tatuadores{
+            .filter{
+                h2{
+                    font-size: 80px;
+                }
+            }
+        }
+    }
+}

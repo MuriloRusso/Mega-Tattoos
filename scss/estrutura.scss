@@ -1,0 +1,214 @@
+.estrutura{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    .container{
+        flex-direction: column;
+        @include txt-info-box();
+        hr{
+            background-color: $black;
+            width: 400px;
+        }
+        p{
+            margin-bottom: 20px;
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            .instalacoes{
+                margin-right: 10px;
+                background-image: url(../img/estrutura/instalacoes.jpg);
+            }
+            .equipamentos{
+                background-image: url(../img/estrutura/equipamentos.jpg);
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                width: 545px;
+                height: 661px;
+                background-size: cover;
+                background-position: center;
+                color: $white;
+                .filter{
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,0.6);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    h2{
+                        font-size: 30px;
+                        font-weight: 400;
+                    }
+                    hr{
+                        background-color: $white;
+                        width: 160px;
+                        border: none;
+                    }
+                    p{
+                        margin-left: 2%;
+                        width: 96%;
+                        line-height: 1.8;
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                        font-weight: 600;
+                    }
+                    a{
+                        @include btn();
+                        width: 179px;
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1000px) and (min-width: 0px){
+    .estrutura{
+        .container{
+            p{
+                margin-left: 0;
+            }
+            div{
+                margin-bottom: 50px;
+                flex-direction: column;
+                align-items: center;
+                .instalacoes{
+                    margin-bottom: 30px;
+                    margin-right: 0;
+                }
+                .equipamentos{
+                    .filter{
+                        margin-bottom: 0;
+                    }
+                }
+                div{
+                    width: 85%;
+                    height: auto;
+                    .filter{
+                        margin-bottom: 0;
+                        h2{
+                            margin-top: 200px;
+                            font-size: 90px;
+                        }
+                        hr{
+                            height: 5px;
+                            width: 30%;
+                        }
+                        p{
+                            font-size: 50px;
+                            margin-bottom: 50px;
+                        }
+                        a{
+                            width: 400px;
+                            height: 100px;
+                            line-height: 100px;
+                            font-size: 50px;
+                            margin-bottom: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 625px){
+    .estrutura{
+        .container{
+            hr{
+                width: 50%;
+            }
+            div{
+                margin-bottom: 20px;
+                div{
+                    .filter{
+                        h2{
+                            margin-top: 80px;
+                            font-size: 45px;
+                        }
+                        p{
+                            font-size: 20px;
+                        }
+                        a{
+                            width: 250px;
+                            height: 60px;
+                            font-size: 20px;
+                            line-height: 60px;
+                            margin-bottom: 80px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 350px){
+    .estrutura{
+        .container{
+            div{
+                margin-bottom: 20px;
+                div{
+                    height: auto;
+                    margin-bottom: 20px;
+                    .filter{
+                        h2{
+                            margin-top: 50px;
+                            font-size: 25px;
+                        }
+                        a{
+                            width: 120px;
+                            height: 50px;
+                            line-height: 50px;
+                            font-size: 15px;
+                            margin-bottom: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 220px){
+    .estrutura{
+        .container{
+            div{
+                div{
+                    .filter{
+                        h2{
+                            font-size: 18px;
+                        }
+                        p{
+                            font-size: 15px;
+                        }
+                        a{
+                            width: 80%; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (orientation: landscape) and (max-width:1000px){
+    .estrutura{
+        .container{
+            div{
+                div{
+                    .filter{
+                        h2{
+                            font-size: 80px;
+                        }
+                    }
+                    height: auto;
+                }
+            }
+        }
+    }
+}

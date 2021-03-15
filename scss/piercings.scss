@@ -1,0 +1,162 @@
+.piercings{
+    display: flex;
+    justify-content: center;
+    .container{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 1150px;
+        justify-content: center;
+        @include txt-info-box();
+        h2{
+            margin: 25px 0 20px 0;
+            font-weight: 400;
+        }
+        hr{
+            width: 345px;
+            margin-bottom: 10px;
+            background-color: $black;
+            border: none;
+        }
+        p{
+            line-height: 2;
+            margin-bottom: 10px;
+            width: 96%;
+            margin-left: 2%;
+        }
+        div{
+            display: flex;
+            img{
+                margin-right: 20px;
+                width: 365px;
+                height: 547px;
+                background: gray;
+                cursor: pointer;
+            }
+            img:nth-child(3){
+                margin-right: 0;
+            }
+        }
+        a{
+            @include btn();
+            margin-top: 20px;
+            width: 179px;
+            height: 57px;
+            line-height: 57px;
+        }
+    }
+}
+@media (max-width: 1200px) and (min-width: 1000px){
+    .piercings {
+        .container {
+            div{
+                img {
+                    width: 300px;
+                    height: 420px;
+                }
+            }
+        }       
+    }
+}
+@media (max-width: 1000px) and (min-width: 0px){
+    .piercings{
+        .container{
+            width: 100%;
+            p{
+                margin-left: 0;
+            }
+            div{
+                display: block;
+                img{
+                    width: 45%;
+                    margin-right: 2.5%;
+                    height: 600px;
+                    margin-bottom: 30px;
+                }
+                img:nth-child(2){
+                    margin-right: 0;
+                }
+                img:last-child{
+                    width: 94%;
+                    height: 1400px;
+                }
+            }
+            a{
+                margin-top: 50px;
+                line-height: 150px;
+                width: 500px;
+                height: 150px;
+                font-size: 50px;
+                margin-bottom: 150px;
+            }
+        }
+    }
+}
+@media (max-width: 625px){
+    .piercings{
+        .container{
+            hr{
+                width: 50%;
+            }
+            div{
+                img{
+                    height: auto;
+                }
+                img:last-child{
+                    height: auto;
+                }
+            }
+            a{
+                width: 250px;
+                height: 80px;
+                line-height: 80px;
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+@media (max-width: 350px){
+    .piercings{
+        .container{
+            a{
+                width: 120px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+@media (max-width: 220px){
+    .piercings{
+        .container{
+            h2{
+                font-size: 25px;
+            }
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+}
+@media (orientation: landscape) and (max-width:1000px){
+    .piercings{
+        .container{
+            div{
+                img, img:last-child{
+                    width: 28%;
+                    height: 350px; 
+                    margin-right: 10px;
+                }
+                img:nth-child(2){
+                    margin-right: 10px;
+                }
+                img:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

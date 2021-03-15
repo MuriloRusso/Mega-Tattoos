@@ -1,0 +1,255 @@
+.header-agendar{
+    height: 110vh;
+    .info-box-header-agendar{
+        height: 80%;
+        width: 100%;
+        background-image: url(../../img/agendar.jpg);
+        background-size: cover;
+        color: $white;
+        .filter{
+            background-color: rgba(0,0,0,0.5);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @include txt-info-box();
+            h2{
+                text-align: center;
+            }
+            hr{
+                width: 400px;
+                background-color: $white;
+            }
+        }
+    }
+}
+.container-agendar{
+    @include txt-info-box();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    hr{
+        background-color: $black;
+        width: 400px;   
+    }
+    form{
+        color: $white;
+        background-color: #444444;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+        div{
+            display: flex;
+            flex-direction: column;
+            padding-left: 5%; 
+            padding-bottom: 20px;
+            label{
+                margin-bottom: 10px;
+            }
+            input{
+                height: 30px;
+                border-radius: 3px;
+                border: none;
+            }
+            #nome{
+                width: 60%; 
+            }
+            #email, #tel{
+                width: 70%; 
+            }
+            #servico{
+                width: 20%;
+                height: 30px;
+                border-radius: 3px;
+            }
+            textarea{
+                width: 77%;
+                height: 120px;
+                border-radius: 3px;
+            }
+            small{
+                margin-top: 5px;
+            }
+        }
+        div:first-child{
+            margin-top: 50px;
+            width: 90%;
+        }
+        div:nth-child(2), div:nth-child(3){
+            width: 40%; 
+        }
+        div:nth-child(4), div:nth-child(5){
+            width: 100%; 
+        }
+        div:last-child{
+            width: 90%; 
+            padding-left: 5%;
+            input{
+                height: 42px; 
+                width: 20%;
+                font-size: 20px;
+                font-family: 'Berkshire Swash', cursive;
+                color: #444444;
+            }
+        }
+    }
+}
+@media (max-width: 1000px) and (min-width: 0px){
+    .header-agendar{
+        .info-box-header-agendar{
+            .filter{
+                h2{
+                    font-size: 120px;
+                }
+            }
+        }
+    }
+    .container-agendar{
+        form{
+            div:first-child {
+                margin-top: 50px;
+                width: 100%;
+            }
+            div, div:nth-child(2), div:nth-child(3){
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+                padding-left: 0;
+                label{
+                    font-size: 35px;
+                }
+                small{
+                    font-size: 28px;
+                    text-align: center;
+                }
+                input, #servico{
+                    height: 110px;
+                    font-size: 50px;
+                    padding-left: 2%;
+                }
+                #nome, #email, #tel, #servico{
+                    width: 90%; 
+                }
+                textarea{
+                    height: 300px;  
+                    width: 90%;
+                    font-size: 50px;
+                    padding-left: 2%;   
+                }
+            }
+            div:nth-child(5){
+                label{
+                    font-size: 35px;
+                }
+                small{
+                    font-size: 17px;
+                }
+            }
+            div:last-child{
+                input{
+                    margin-top: 20px;
+                    font-size: 45px;
+                    width: 60%;
+                    height: 140px; 
+                }
+            }
+        }
+    }
+}
+@media (max-width: 625px) and (min-width: 0px){
+    .header-agendar{
+        height: 60vh;
+        .info-box-header-agendar {
+            .filter{
+                h2{
+                    font-size: 58px;
+                }
+                hr{
+                    width: 50%;
+                }
+            }
+        }
+    }
+    .container-agendar{
+        h2{
+            font-size: 55px;
+        }
+        form{
+            div{
+                label{
+                    font-size: 20px;
+                }
+                input, #nome, #email, #tel, #servico{
+                    font-size: 20px;
+                    height: 50px;
+                }
+                small{
+                    font-size: 12px;
+                }
+            }
+            div:nth-child(2) label, div:nth-child(3) label, div:nth-child(5) label{
+                text-align: center;
+                font-size: 20px;
+            }
+            div:nth-child(2) small, div:nth-child(3) small{
+                font-size: 12px;
+            }
+            #comentarios{
+                height: 100px;
+                font-size: 20px;
+            }
+            div:last-child{
+                input{
+                    width: 100%;
+                    height: 50px;
+                    font-size: 20px;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 350px) and (min-width: 0px){
+    .header-agendar{
+        .info-box-header-agendar {
+            .filter{
+                h2{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    .container-agendar{
+        h2{
+            font-size: 20px;
+        }
+        hr{
+            width: 50%;
+        }
+        form{
+            div:last-child{
+                input{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+@media (orientation: landscape) and (max-width:1000px){
+    .header-agendar{
+        height: 110vh;
+        .info-box-header-agendar{
+            .filter{
+                h2{
+                    font-size: 80px;
+                }
+            }
+        }
+    }
+}

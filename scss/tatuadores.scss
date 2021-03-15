@@ -1,0 +1,62 @@
+.tatuadores{
+    width: 100%;
+    height: 534px;
+    background-image: url(../img/tatuadores.jpg);
+    background-size: cover;
+    background-position: center;
+    .filter{
+        background-color: rgba(0,0,0,0.5);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        @include txt-info-box();
+        hr{
+            background-color: $white;
+            width: 400px;
+        }
+        p{
+            margin-bottom: 20px;
+        }
+        a{
+            width: 179px;
+            height: 50px;
+            @include btn();
+            line-height: 50px;
+        }
+    }
+}
+@media (max-width: 1000px)  {
+    .tatuadores{
+        height: 80vh;
+        .filter{
+            p{
+                text-align: center;
+            }
+        }
+    }
+}
+@media (max-width: 625px) and (min-width: 0px){
+    .tatuadores{
+        .filter{
+            hr{
+                width: 50%;
+            }
+        }
+    }
+}
+@media (max-width: 350px){
+    .tatuadores{
+        .filter{
+        }
+    }
+}
+
+@media (orientation: landscape) and (max-width:1000px){
+    .tatuadores{
+        height: 150vh;
+    }
+}

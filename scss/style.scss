@@ -1,0 +1,46 @@
+@import "./variaveis.scss";
+@import "./menu.scss";
+@import "./header.scss";
+@import "./modelos.scss";
+@import "./tatuadores.scss";
+@import "./estrutura.scss";
+@import "./agendar.scss";
+@import "./galery.scss";
+@import "./piercings.scss";
+@import "./localizacao.scss";
+@import "./contato.scss";
+@import "./footer.scss";
+@import "./Pages/modelos.scss";
+@import "./Pages/piercings.scss";
+@import "./Pages/tatuadores.scss";
+@import "./Pages/instalacoes.scss";
+@import "./Pages/equipamentos.scss";
+@import "./Pages/agendar.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1200px;
+    display: flex;
+    align-items: center;
+}
+h2{
+    font-size: 50px;
+    font-family: 'Berkshire Swash', cursive;
+}
+@media (max-width: 1200px) and (min-width: 0px){
+    .container{
+        width: 100%;
+    }
+}
